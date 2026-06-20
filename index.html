@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gastro &amp; Gallery Santa Maria · Vodice — kamen, slike s mora i okusi Mediterana</title>
+<meta name="description" content="Restoran Santa Maria u Vodicama — gastro-galerija u kamenim zidinama. Kolekcija skupljana desetljećima: slike s mora, stari brodski fenjeri, satovi i bakreno posuđe. Tortilla Santa Maria, paella, pasta negro, odresci. Rezervirajte stol telefonom ili WhatsAppom." />
+<link rel="canonical" href="https://artme-nx.github.io/santa-maria-vodice-v3/" />
+
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Gastro &amp; Gallery Santa Maria · Vodice" />
+<meta property="og:description" content="Kamene zidine. Slike s mora. Sve skupljano desetljećima. Mediteran, Italija i Meksiko na jednom stolu — u Vodicama." />
+<meta property="og:url" content="https://artme-nx.github.io/santa-maria-vodice-v3/" />
+<meta property="og:locale" content="hr_HR" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restoran Santa Maria — Gastro & Gallery",
+  "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80",
+  "url": "https://artme-nx.github.io/santa-maria-vodice-v3/",
+  "servesCuisine": ["Mediterranean", "Italian", "Mexican", "Tex-Mex"],
+  "priceRange": "$$",
+  "telephone": "+385 22 443 319",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ul. Kamila Pamukovića 6",
+    "addressLocality": "Vodice",
+    "postalCode": "22211",
+    "addressCountry": "HR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.7589, "longitude": 15.7782 },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "840"
+  },
+  "acceptsReservations": "Reservations by phone or WhatsApp"
+}
+</script>
+
+<style>
+  :root{
+    --bg:#F5F1E8;          /* parchment */
+    --terra:#B5784A;        /* terracotta */
+    --charcoal:#2C2C2C;
+    --olive:#5B6B3A;
+    --sage:#A3B18A;
+    --stone:#8C7F72;
+    --paper-dark:#ECE5D6;
+    --ink:#33302A;
+    --line:rgba(44,44,44,.16);
+
+    --font-display:"Cormorant Garamond", Georgia, serif;
+    --font-body:"DM Sans", system-ui, sans-serif;
+    --font-narr:"Source Serif 4", Georgia, serif;
+
+    --pad:clamp(1.25rem, 5vw, 6rem);
+    --maxw:1280px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--charcoal);
+    font-family:var(--font-body);
+    font-size:17px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--terra);color:var(--bg)}
+
+  /* ---------- Grain overlay ---------- */
+  .grain{
+    position:fixed;inset:0;z-index:9000;pointer-events:none;
+    opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- Typography helpers ---------- */
+  .eyebrow{
+    font-family:var(--font-body);
+    text-transform:uppercase;
+    letter-spacing:.28em;
+    font-size:11px;
+    color:var(--terra);
+    font-weight:500;
+  }
+  h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.04;letter-spacing:.005em}
+  h2{font-size:clamp(2.1rem,5vw,3.8rem)}
+  h3{font-size:clamp(1.4rem,2.6vw,2rem)}
+  .italic{font-style:italic}
+  .narr{font-family:var(--font-narr);font-size:1.075rem;line-height:1.85;color:var(--ink)}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+  section{padding-block:clamp(4rem,9vw,8rem)}
+
+  /* ---------- Reveal ---------- */
+  [data-reveal]{opacity:0;transform:translateY(26px)}
+  .reveal-ready [data-reveal]{will-change:opacity,transform}
+
+  /* ---------- Sepia gallery filter ---------- */
+  .sepia img{filter:sepia(.2) contrast(1.08) saturate(.85);transition:filter .8s ease, transform 1.4s ease}
+  .sepia figure:hover img{filter:sepia(.05) contrast(1.05) saturate(1);transform:scale(1.04)}
+
+  /* image container fallbacks (CSS-only robustness) */
+  .imgbox{position:relative;overflow:hidden;background:
+    linear-gradient(135deg,#cdbfa8 0%, #b8a585 45%, #9c8c7c 100%);}
+  .imgbox.stone{background:
+    repeating-linear-gradient(115deg,#b9a98e 0 22px,#b2a184 22px 44px),
+    linear-gradient(160deg,#c4b497,#8c7f72);}
+  .imgbox.dark{background:linear-gradient(160deg,#3a352d,#211e19);}
+  .imgbox::after{content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 80% at 30% 20%, transparent 40%, rgba(44,44,44,.18) 100%);
+    pointer-events:none}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1rem var(--pad);
+    transition:background .5s ease, box-shadow .5s ease, padding .4s ease;
+  }
+  header.solid{background:rgba(245,241,232,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line)}
+  .brand{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:1.5rem;letter-spacing:.02em}
+  .brand svg{width:26px;height:26px;flex:none;color:var(--terra)}
+  .brand small{display:block;font-family:var(--font-body);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--stone);margin-top:1px}
+  nav.main{display:flex;align-items:center;gap:2rem}
+  nav.main a.navlink{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--charcoal);position:relative;padding-bottom:3px}
+  nav.main a.navlink::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--terra);transition:width .4s ease}
+  nav.main a.navlink:hover::after{width:100%}
+  .lang{display:flex;gap:.5rem;font-size:11px;letter-spacing:.1em;color:var(--stone)}
+  .lang button{background:none;border:none;cursor:pointer;color:var(--stone);font:inherit;padding:2px 1px}
+  .lang button.active{color:var(--terra);font-weight:700}
+  .btn-res{
+    font-family:var(--font-body);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    border:1px solid var(--terra);color:var(--terra);padding:.7rem 1.3rem;border-radius:2px;
+    transition:background .4s ease,color .4s ease;cursor:pointer;background:none
+  }
+  .btn-res:hover{background:var(--terra);color:var(--bg)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:2px;background:var(--charcoal);transition:.3s}
+
+  /* mobile nav */
+  .mobile-nav{
+    position:fixed;inset:0;z-index:999;background:var(--bg);
+    display:flex;flex-direction:column;justify-content:center;gap:1.5rem;
+    padding:var(--pad);transform:translateY(-100%);transition:transform .55s cubic-bezier(.7,0,.2,1);
+  }
+  .mobile-nav.open{transform:translateY(0)}
+  .mobile-nav a{font-family:var(--font-display);font-size:2rem}
+  .mobile-nav .lang{margin-top:1.5rem;font-size:14px}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1fr 1fr;gap:2px;padding-top:0}
+  .hero .imgbox{min-height:50svh}
+  .hero .hero-quote{
+    grid-column:1 / -1;position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;padding:var(--pad);
+    z-index:3;color:var(--bg);
+  }
+  .hero::before{content:"";position:absolute;inset:0;z-index:2;background:rgba(30,26,20,.42)}
+  .hero-quote .eyebrow{color:#e8c9a8}
+  .hero-quote h1{
+    color:var(--bg);font-size:clamp(2.6rem,7vw,5.6rem);max-width:14ch;margin:1rem 0 .8rem;
+    text-shadow:0 2px 30px rgba(0,0,0,.4)
+  }
+  .hero-quote p.tag{font-family:var(--font-display);font-style:italic;font-size:clamp(1.1rem,2.4vw,1.7rem);color:#f0e6d6;max-width:30ch}
+  .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;color:var(--bg);font-size:10px;letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+  .hero-scroll i{display:block;width:1px;height:34px;background:rgba(255,255,255,.6);animation:scrollpulse 2.4s ease-in-out infinite}
+  @keyframes scrollpulse{0%,100%{transform:scaleY(.4);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+  /* ---------- Divider (SVG line-art) ---------- */
+  .divider{display:flex;align-items:center;justify-content:center;gap:1.2rem;color:var(--stone);padding-block:1rem}
+  .divider svg{width:clamp(140px,30vw,320px);height:40px;color:var(--terra);opacity:.8}
+
+  /* ---------- Story ---------- */
+  .story{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+  .story .imgbox{aspect-ratio:4/5;border:1px solid var(--line)}
+  .story .lead{font-family:var(--font-display);font-size:clamp(1.5rem,2.6vw,2.1rem);font-style:italic;color:var(--terra);line-height:1.3;margin-bottom:1.4rem}
+
+  /* ---------- Timeline ---------- */
+  .timeline{position:relative;max-width:880px;margin-inline:auto;padding-left:2rem}
+  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--line)}
+  .tl-item{position:relative;padding:0 0 2.6rem 2rem}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-1.95rem;top:.55rem;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--terra)}
+  .tl-when{font-family:var(--font-display);font-style:italic;font-size:1.5rem;color:var(--olive)}
+  .tl-item h3{margin:.2rem 0 .4rem}
+  .tl-item p{color:var(--ink)}
+
+  /* ---------- Collection grid ---------- */
+  .coll-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1.2rem}
+  .coll-grid figure{position:relative;border:1px solid var(--line)}
+  .coll-grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:1rem 1.1rem;color:var(--bg);
+    background:linear-gradient(transparent,rgba(25,21,16,.82));
+    font-family:var(--font-display);font-size:1.2rem
+  }
+  .coll-grid figcaption small{display:block;font-family:var(--font-body);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#e8c9a8;margin-top:2px}
+  .c-a{grid-column:span 7;aspect-ratio:16/11}
+  .c-b{grid-column:span 5;aspect-ratio:4/5}
+  .c-c{grid-column:span 5;aspect-ratio:4/4}
+  .c-d{grid-column:span 7;aspect-ratio:16/9}
+
+  /* ---------- Gastronomy ---------- */
+  .gastro{background:var(--paper-dark)}
+  .gastro .philo{max-width:680px;margin:0 auto 3.5rem;text-align:center}
+  .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem clamp(2rem,5vw,5rem)}
+  .dish{border-bottom:1px solid var(--line);padding-bottom:1.1rem}
+  .dish h3{display:flex;align-items:baseline;gap:.6rem}
+  .dish h3 .dot{flex:1;height:1px;background:var(--line);transform:translateY(-4px)}
+  .dish p{font-size:.98rem;color:var(--stone);margin-top:.3rem}
+  .dish .badge{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);border:1px solid var(--terra);padding:2px 6px;border-radius:2px}
+
+  /* ---------- Atmosphere ---------- */
+  .atmo{background:var(--charcoal);color:var(--bg)}
+  .atmo .eyebrow{color:#d9a877}
+  .atmo h2{color:var(--bg)}
+  .atmo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3rem);margin-top:3rem}
+  .atmo-card .ic{width:46px;height:46px;color:var(--terra);margin-bottom:1rem}
+  .atmo-card h3{color:var(--bg);margin-bottom:.5rem}
+  .atmo-card p{color:rgba(245,241,232,.72);font-size:.98rem}
+
+  /* ---------- Gallery ---------- */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  .gal-grid figure{position:relative;border:1px solid var(--line);overflow:hidden}
+  .gal-grid figure:nth-child(1){grid-column:span 2;aspect-ratio:3/2}
+  .gal-grid figure:nth-child(2){aspect-ratio:3/4}
+  .gal-grid figure:nth-child(3){aspect-ratio:3/4}
+  .gal-grid figure:nth-child(4){aspect-ratio:3/4}
+  .gal-grid figure:nth-child(5){aspect-ratio:3/4}
+  .gal-grid figure:nth-child(6){grid-column:span 2;aspect-ratio:3/2}
+  .gal-grid figcaption{
+    position:absolute;inset:0;display:flex;align-items:flex-end;padding:1rem;
+    font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--bg);
+    background:linear-gradient(transparent 55%,rgba(25,21,16,.7));
+    opacity:0;transition:opacity .6s ease
+  }
+  .gal-grid figure:hover figcaption{opacity:1}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--olive);color:var(--bg)}
+  footer .wrap{padding-block:clamp(3.5rem,7vw,6rem)}
+  .foot-top{text-align:center;max-width:640px;margin:0 auto 3.5rem}
+  .foot-top h2{color:var(--bg);font-style:italic;margin-bottom:.6rem}
+  .foot-top .stars{color:#f0d9b5;letter-spacing:.1em;margin-top:1rem;font-size:.95rem}
+  .foot-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;border-top:1px solid rgba(245,241,232,.22);padding-top:2.5rem}
+  .foot-cols h4{font-family:var(--font-body);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#dfe7cf;margin-bottom:.9rem}
+  .foot-cols a,.foot-cols p{color:rgba(245,241,232,.85);font-size:.95rem;line-height:1.9}
+  .foot-cols a:hover{color:#fff;text-decoration:underline}
+  .foot-bottom{margin-top:2.5rem;font-size:11px;letter-spacing:.05em;color:rgba(245,241,232,.6);text-align:center}
+
+  /* ---------- Mobile reserve bar ---------- */
+  .resbar{
+    position:fixed;left:0;right:0;bottom:0;z-index:900;display:none;
+    grid-template-columns:1fr 1fr;background:var(--charcoal);box-shadow:0 -2px 20px rgba(0,0,0,.25)
+  }
+  .resbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem;font-size:13px;letter-spacing:.06em;color:var(--bg);text-transform:uppercase}
+  .resbar a.wa{background:var(--olive)}
+  .resbar svg{width:17px;height:17px}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:900px){
+    .story{grid-template-columns:1fr}
+    .story .imgbox{aspect-ratio:16/11;order:-1}
+    .menu-grid{grid-template-columns:1fr}
+    .atmo-grid{grid-template-columns:1fr}
+    .coll-grid figure{grid-column:1 / -1 !important;aspect-ratio:16/11 !important}
+    .gal-grid{grid-template-columns:repeat(2,1fr)}
+    .gal-grid figure{grid-column:span 1 !important;aspect-ratio:1/1 !important}
+    .gal-grid figcaption{opacity:1}
+    .foot-cols{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    nav.main,.btn-res{display:none}
+    .burger{display:flex}
+    .hero{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
+    .resbar{display:grid}
+    body{padding-bottom:52px}
+    .timeline{padding-left:1rem}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto}
+    .hero-scroll i{animation:none}
+    [data-reveal]{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header id="header">
+  <a href="#" class="brand" aria-label="Santa Maria — početna">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+      <path d="M12 2v20M12 22c-4-1-7-4-7-9h14c0 5-3 8-7 9z"/><path d="M12 4l5 7H7l5-7z"/>
+    </svg>
+    <span>Santa Maria<small>Gastro &amp; Gallery · Vodice</small></span>
+  </a>
+  <nav class="main" aria-label="Glavna navigacija">
+    <a class="navlink" href="#prica">Naša priča</a>
+    <a class="navlink" href="#kronika">Kronika</a>
+    <a class="navlink" href="#galerija">Galerija u kamenu</a>
+    <a class="navlink" href="#kuhinja">Kuhinja</a>
+    <a class="navlink" href="#kontakt">Kontakt</a>
+    <div class="lang" role="group" aria-label="Jezik">
+      <button class="active">HR</button><button>EN</button><button>DE</button><button>IT</button>
+    </div>
+    <a class="btn-res" href="tel:+38522443319">Rezerviraj stol</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Izbornik" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#prica">Naša priča</a>
+  <a href="#kronika">Kronika</a>
+  <a href="#galerija">Galerija u kamenu</a>
+  <a href="#kuhinja">Kuhinja</a>
+  <a href="#atmosfera">Atmosfera</a>
+  <a href="#kontakt">Kontakt</a>
+  <div class="lang">
+    <button class="active">HR</button><button>EN</button><button>DE</button><button>IT</button>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="imgbox stone" data-parallax>
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80" alt="Kamena unutrašnjost taverne pri svjetlu svijeća" onerror="this.style.display='none'" />
+  </div>
+  <div class="imgbox dark">
+    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80" alt="Stol pri svjetlu svijeća s mediteranskim jelom" onerror="this.style.display='none'" />
+  </div>
+  <div class="hero-quote">
+    <span class="eyebrow">Vodice · Dalmacija · od davnina</span>
+    <h1>Kamene zidine. Slike s mora.</h1>
+    <p class="tag italic">Sve skupljano desetljećima. S našega kamena, na vaš stol.</p>
+  </div>
+  <div class="hero-scroll" aria-hidden="true"><span>Uđite</span><i></i></div>
+</section>
+
+<!-- divider -->
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 320 40" fill="none" stroke="currentColor" stroke-width="1.2">
+    <path d="M0 20h120M200 20h120"/>
+    <path d="M160 8c-6 5-14 6-20 0 6 6 6 18 0 24 6-6 14-5 20 0 6-5 14-6 20 0-6-6-6-18 0-24-6 6-14 5-20 0z"/>
+    <circle cx="160" cy="20" r="2.4" fill="currentColor" stroke="none"/>
+  </svg>
+</div>
+
+<!-- ===================== NAŠA PRIČA ===================== -->
+<section id="prica">
+  <div class="wrap story">
+    <div data-reveal>
+      <span class="eyebrow">Naša priča</span>
+      <p class="lead italic">Sve je počelo s jednim zidom kamena i jednom slikom mora.</p>
+      <p class="narr">Santa Maria u Vodicama nije nastala odjednom. Slagala se polako, kao što se slaže suhozid — kamen po kamen, predmet po predmet, gost po gost. Stare zidine ovoga prostora pamte generacije; mi smo ih samo napunili životom, mirisom kuhinje i svjetlom svijeća.</p>
+      <p class="narr" style="margin-top:1rem">Na zidovima vise platna s jedrenjacima i prizorima mora, kupljena i darivana kroz desetljeća. Među njima — mjedeni svijećnjaci, stari brodski fenjeri koji su nekad svijetlili na palubi, satovi koji više ne kucaju u istom ritmu i restaurirano bakreno posuđe iz kuhinja koje odavno ne postoje. Svaki komad ima priču, i svaki gost koji uđe postane dio te zbirke.</p>
+      <p class="narr" style="margin-top:1rem">Generacija za generacijom, Santa Maria je u Vodicama postala više od restorana — mjesto kamo se dolazi jesti, ali i sjesti, gledati i ostati malo dulje nego što se planiralo.</p>
+    </div>
+    <div class="imgbox stone" data-reveal data-parallax>
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1600&q=80" alt="Stara kamena prostorija s patinom i toplim svjetlom" loading="lazy" onerror="this.style.display='none'" />
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 320 40" fill="none" stroke="currentColor" stroke-width="1.2">
+    <path d="M0 20h130M190 20h130"/>
+    <path d="M150 26c4-10 16-10 20-2-4-8-4-14 6-18-12 2-18-2-16-6-4 10-16 10-20 2 4 8 4 14-6 18 12-2 18 2 16 6z"/>
+  </svg>
+</div>
+
+<!-- ===================== KRONIKA / TIMELINE ===================== -->
+<section id="kronika">
+  <div class="wrap">
+    <div style="text-align:center;max-width:620px;margin:0 auto 3.5rem" data-reveal>
+      <span class="eyebrow">Kronika kuće i zbirke</span>
+      <h2 style="margin-top:.6rem">Poglavlja ispisana desetljećima</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item" data-reveal>
+        <div class="tl-when italic">Desetljećima unazad</div>
+        <h3>Kamen postaje kuhinja</h3>
+        <p class="narr">Stare zidine u srcu Vodica dobivaju novu svrhu. Prvi stolovi, prva vatra, prvi gosti — i prva slika mora obješena da pokrije goli zid.</p>
+      </div>
+      <div class="tl-item" data-reveal>
+        <div class="tl-when italic">Godine koje slijede</div>
+        <h3>Zid postaje galerija</h3>
+        <p class="narr">Platno za platnom, fenjer za fenjerom. Mornarske slike, mjedeni svijećnjaci i brodski fenjeri dolaze s buvljaka, iz nasljedstava i od gostiju koji su htjeli da njihov komad ostane ovdje.</p>
+      </div>
+      <div class="tl-item" data-reveal>
+        <div class="tl-when italic">Generacija za generacijom</div>
+        <h3>Okusi se šire preko mora</h3>
+        <p class="narr">Mediteran se na ovome stolu sreće s Italijom i Meksikom. Rađa se Tortilla Santa Maria, paella ulazi u stalnu ponudu, tijesto za pasta negro počinje se mijesiti kod kuće.</p>
+      </div>
+      <div class="tl-item" data-reveal>
+        <div class="tl-when italic">Uz put</div>
+        <h3>Papiga i ljuske od kikirikija</h3>
+        <p class="narr">Doseljava se papiga, stalni stanovnik kuće. Dok čekate, krckaju se kikirikiji, a ljuske se — po starom običaju — bacaju na pod. Mali rituali koji su postali zaštitni znak.</p>
+      </div>
+      <div class="tl-item" data-reveal>
+        <div class="tl-when italic">Danas</div>
+        <h3>Vodička institucija</h3>
+        <p class="narr">Ocjena 4,6 zvjezdica iz više od 840 recenzija i naraštaji gostiju koji se vraćaju. Zbirka i dalje raste — jer Santa Maria nikad nije bila gotova, samo uvijek dobrodošla.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 320 40" fill="none" stroke="currentColor" stroke-width="1.2">
+    <path d="M0 20h120M200 20h120"/>
+    <path d="M160 6v28M150 14l10-8 10 8M150 26l10 8 10-8"/>
+  </svg>
+</div>
+
+<!-- ===================== GALERIJA U KAMENU ===================== -->
+<section id="galerija">
+  <div class="wrap">
+    <div style="max-width:640px;margin:0 0 3rem" data-reveal>
+      <span class="eyebrow">Galerija u kamenu</span>
+      <h2 style="margin:.6rem 0">Živi muzej koji možete ručati</h2>
+      <p class="narr">Naša najveća dvorana nije sala — to je zbirka. Slike s mora, fenjeri, satovi i bakar žive na zidovima oko vas dok jedete. Slobodno ustanite, priđite i pogledajte izbliza.</p>
+    </div>
+    <div class="coll-grid sepia">
+      <figure class="c-a imgbox" data-reveal>
+        <img src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?auto=format&fit=crop&w=1600&q=80" alt="Stara mornarska slika jedrenjaka na kamenu zidu" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>Slike s mora<small>jedrenjaci · valovi · luke</small></figcaption>
+      </figure>
+      <figure class="c-b imgbox dark" data-reveal>
+        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1600&q=80" alt="Stari brodski fenjer pri svjetlu svijeće" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>Brodski fenjeri<small>mjed · staklo · plamen</small></figcaption>
+      </figure>
+      <figure class="c-c imgbox" data-reveal>
+        <img src="https://images.unsplash.com/photo-1495364141860-b0d03eccd065?auto=format&fit=crop&w=1600&q=80" alt="Vintage satovi koji više ne kucaju u istom ritmu" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>Stari satovi<small>vrijeme koje se ne žuri</small></figcaption>
+      </figure>
+      <figure class="c-d imgbox stone" data-reveal>
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1600&q=80" alt="Restaurirano bakreno posuđe na kamenom zidu" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>Bakreno posuđe<small>restaurirano · iznova sjajno</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 320 40" fill="none" stroke="currentColor" stroke-width="1.2">
+    <path d="M0 20h130M190 20h130"/>
+    <path d="M160 8c-6 5-14 6-20 0 6 6 6 18 0 24 6-6 14-5 20 0 6-5 14-6 20 0-6-6-6-18 0-24-6 6-14 5-20 0z"/>
+  </svg>
+</div>
+
+<!-- ===================== KUHINJA / GASTRONOMIJA ===================== -->
+<section class="gastro" id="kuhinja">
+  <div class="wrap">
+    <div class="philo" data-reveal>
+      <span class="eyebrow">Kuhinja kao filozofija</span>
+      <h2 style="margin:.6rem 0">Mediteran koji je putovao</h2>
+      <p class="narr">Naša kuhinja ne pripada samo jednoj obali. Počinje na Jadranu — s ribom, maslinovim uljem i svježim začinskim biljem — pa luta do Italije i do Meksika, i vraća se za vaš stol. Tijesto mijesimo sami, polentu kuhamo polako, a odreske pečemo bez žurbe. Bez cjenika u priči: o brojkama radije razgovaramo za stolom.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="dish" data-reveal>
+        <h3>Tortilla Santa Maria <span class="dot"></span> <span class="badge">potpis kuće</span></h3>
+        <p>Polenta, grah, meso i sir — naše jelo po kojem nas pamtite. Nema ga nigdje drugdje jer ga nigdje drugdje nismo ni izmislili.</p>
+      </div>
+      <div class="dish" data-reveal>
+        <h3>Pasta Negro <span class="dot"></span></h3>
+        <p>Domaći rezanci od crnila sipe, gusti i morski. Tijesto mijesimo u kući, svaki dan iznova.</p>
+      </div>
+      <div class="dish" data-reveal>
+        <h3>Paella <span class="dot"></span></h3>
+        <p>Riža, plodovi mora i vatra koja se ne požuruje. Mediteran u jednoj tavi, za podijeliti.</p>
+      </div>
+      <div class="dish" data-reveal>
+        <h3>Rižoto Negro <span class="dot"></span></h3>
+        <p>Crni rižoto od sipe, kremast i intenzivan — klasik Jadrana kakvog ovdje pripremamo desetljećima.</p>
+      </div>
+      <div class="dish" data-reveal>
+        <h3>Odrezak 300 g <span class="dot"></span></h3>
+        <p>Sočan komad pečen na žaru, do točke koju vi tražite. Jednostavno, kako i treba.</p>
+      </div>
+      <div class="dish" data-reveal>
+        <h3>Carpaccio od tune <span class="dot"></span></h3>
+        <p>Tanki listovi sirove tune, maslinovo ulje, limun i sol mora. Lagan početak svake večere.</p>
+      </div>
+      <div class="dish" data-reveal>
+        <h3>Burrito &amp; pizza iz krušne peći <span class="dot"></span></h3>
+        <p>Meksička strana stola i pizza pečena u krušnoj peći — za one koji vole da im stol bude raznolik.</p>
+      </div>
+      <div class="dish" data-reveal>
+        <h3>Chateau palačinke <span class="dot"></span> <span class="badge">slatki finiš</span></h3>
+        <p>Naš desert s potpisom — topao, raskošan kraj večere uz svjetlo svijeća.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ATMOSFERA ===================== -->
+<section class="atmo" id="atmosfera">
+  <div class="wrap">
+    <div style="max-width:640px" data-reveal>
+      <span class="eyebrow">Atmosfera</span>
+      <h2 style="margin:.6rem 0">Sitni rituali koji čine kuću</h2>
+      <p class="narr" style="color:rgba(245,241,232,.8)">Santa Maria se ne mjeri samo tanjurom. Mjeri se onim što se dogodi između — dok čekate, dok krckate kikiriki, dok vam papiga dobaci koju riječ, dok svijeća dogori malo niže.</p>
+    </div>
+    <div class="atmo-grid">
+      <div class="atmo-card" data-reveal>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><ellipse cx="9" cy="8" rx="4" ry="5"/><ellipse cx="15" cy="16" rx="4" ry="5"/><path d="M11 11l2 2"/></svg>
+        <h3>Ljuske na podu</h3>
+        <p>Dok čekate, pred vama je zdjela kikirikija. Krcka se i — po starom običaju kuće — ljuske se bacaju na pod. Da, baš tako. Tako je ovdje uvijek bilo.</p>
+      </div>
+      <div class="atmo-card" data-reveal>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3c3 0 5 2 5 5 0 4-5 9-5 9s-5-5-5-9c0-3 2-5 5-5z"/><circle cx="11" cy="7" r="1" fill="currentColor" stroke="none"/><path d="M14 18l3 3M10 18l-3 3"/></svg>
+        <h3>Papiga, stalna stanarka</h3>
+        <p>Naša papiga živi ovdje i nema namjeru nikamo. Pozdravlja goste, komentira po svom, i odavno je dio inventara kao i fenjeri na zidu.</p>
+      </div>
+      <div class="atmo-card" data-reveal>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2c1 2 1 3 0 4-1-1-1-2 0-4z"/><rect x="10" y="6" width="4" height="12" rx="1"/><path d="M8 22h8"/></svg>
+        <h3>Svjetlo svijeća i kamen</h3>
+        <p>Pod večer kamen utopli, svijeće se zapale, a fenjeri bace meku sjenu po slikama mora. To je trenutak zbog kojeg se gosti zadrže duže nego što su mislili.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 320 40" fill="none" stroke="currentColor" stroke-width="1.2">
+    <path d="M0 20h120M200 20h120"/>
+    <path d="M160 8c-6 5-14 6-20 0 6 6 6 18 0 24 6-6 14-5 20 0 6-5 14-6 20 0-6-6-6-18 0-24-6 6-14 5-20 0z"/>
+    <circle cx="160" cy="20" r="2.4" fill="currentColor" stroke="none"/>
+  </svg>
+</div>
+
+<!-- ===================== GALLERY (sepia) ===================== -->
+<section id="galerija-foto">
+  <div class="wrap">
+    <div style="text-align:center;max-width:560px;margin:0 auto 2.6rem" data-reveal>
+      <span class="eyebrow">Pogled iznutra</span>
+      <h2 style="margin-top:.6rem">Miris, kamen, dim i more</h2>
+    </div>
+    <div class="gal-grid sepia">
+      <figure class="imgbox stone" data-reveal>
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1600&q=80" alt="Topla unutrašnjost taverne" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>kamen koji pamti</figcaption>
+      </figure>
+      <figure class="imgbox dark" data-reveal>
+        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=1600&q=80" alt="Mediteransko jelo s plodovima mora" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>miris kuhinje</figcaption>
+      </figure>
+      <figure class="imgbox" data-reveal>
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80" alt="Tanjur jela na drvenom stolu" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>na vaš stol</figcaption>
+      </figure>
+      <figure class="imgbox dark" data-reveal>
+        <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=1600&q=80" alt="Svjetlo svijeće u večernjem ambijentu" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>svjetlo svijeća</figcaption>
+      </figure>
+      <figure class="imgbox stone" data-reveal>
+        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1600&q=80" alt="Maslinovo ulje i začinsko bilje" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>maslina i sol</figcaption>
+      </figure>
+      <figure class="imgbox" data-reveal>
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80" alt="Postavljeni stol uz more" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption>dim i more</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="kontakt">
+  <div class="wrap">
+    <div class="foot-top" data-reveal>
+      <span class="eyebrow" style="color:#dfe7cf">Dobrodošli u našu kuću</span>
+      <h2 class="italic">Dobrodošli u Santa Mariu.</h2>
+      <p class="narr" style="color:rgba(245,241,232,.85)">Za stol nas nazovite ili nam pišite — online rezervacija ne postoji, jer radije čujemo vaš glas. Govorimo hrvatski, engleski, njemački i talijanski.</p>
+      <p class="stars">★★★★★ &nbsp;4,6 / 5 &nbsp;·&nbsp; 840+ recenzija na Googleu</p>
+    </div>
+    <div class="foot-cols">
+      <div data-reveal>
+        <h4>Posjetite nas</h4>
+        <p>Ul. Kamila Pamukovića 6<br/>22211 Vodice, Hrvatska</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=Restoran+Santa+Maria+Ul.+Kamila+Pamukovi%C4%87a+6+Vodice" target="_blank" rel="noopener">Otvori na karti →</a></p>
+      </div>
+      <div data-reveal>
+        <h4>Rezervacije</h4>
+        <p><a href="tel:+38522443319">+385 22 443 319</a></p>
+        <p><a href="https://wa.me/385982219869" target="_blank" rel="noopener">WhatsApp: +385 98 219 869</a></p>
+      </div>
+      <div data-reveal>
+        <h4>Pratite</h4>
+        <p><a href="https://instagram.com/santamariavodice" target="_blank" rel="noopener">Instagram @santamariavodice</a></p>
+        <p><a href="https://facebook.com/santamariavodice" target="_blank" rel="noopener">Facebook @santamariavodice</a></p>
+      </div>
+      <div data-reveal>
+        <h4>Jezici</h4>
+        <p>Hrvatski · English<br/>Deutsch · Italiano</p>
+      </div>
+    </div>
+    <div class="foot-bottom">© <span id="yr"></span> Gastro &amp; Gallery Santa Maria · Vodice, Dalmacija. Kamene zidine, slike s mora — i mjesto za vas.</div>
+  </div>
+</footer>
+
+<!-- ===================== MOBILE RESERVE BAR ===================== -->
+<div class="resbar">
+  <a href="tel:+38522443319">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l2 5v3a1 1 0 0 1-1 1A17 17 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+    Nazovi
+  </a>
+  <a class="wa" href="https://wa.me/385982219869" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3c-.3.3-1 .9-1 2.2s1 2.6 1.2 2.7c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Header solid on scroll ---- */
+  var header = document.getElementById('header');
+  function onScrollHeader(){ header.classList.toggle('solid', window.scrollY > 60); }
+  onScrollHeader();
+  window.addEventListener('scroll', onScrollHeader, {passive:true});
+
+  /* ---- Mobile nav ---- */
+  var burger = document.getElementById('burger');
+  var mnav = document.getElementById('mobileNav');
+  function closeNav(){ mnav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  burger.addEventListener('click', function(){
+    var open = mnav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+    document.body.style.overflow = open ? 'hidden':'';
+  });
+  mnav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+
+  /* ---- GSAP + Lenis ---- */
+  if (window.gsap && window.ScrollTrigger){
+    gsap.registerPlugin(ScrollTrigger);
+    document.body.classList.add('reveal-ready');
+
+    var lenis = null;
+    if (window.Lenis){
+      lenis = new Lenis({
+        duration: reduced ? 0.6 : 1.2,
+        easing: function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+        smoothWheel: !reduced
+      });
+      gsap.ticker.add(function(time){ lenis.raf(time * 1000); });
+      gsap.ticker.lagSmoothing(0);
+      lenis.on('scroll', ScrollTrigger.update);
+
+      /* eased anchor scroll */
+      document.querySelectorAll('a[href^="#"]').forEach(function(a){
+        a.addEventListener('click', function(e){
+          var id = a.getAttribute('href');
+          if (id.length > 1){
+            var target = document.querySelector(id);
+            if (target){ e.preventDefault(); lenis.scrollTo(target, {offset:-40}); }
+          }
+        });
+      });
+    }
+
+    /* ---- Slow fade-in reveals (1.0s) ---- */
+    gsap.utils.toArray('[data-reveal]').forEach(function(el){
+      gsap.to(el, {
+        opacity:1, y:0,
+        duration: reduced ? 0.5 : 1.0,
+        ease:'power2.out',
+        scrollTrigger:{ trigger:el, start:'top 88%' }
+      });
+    });
+
+    /* ---- Subtle parallax (disabled under reduced-motion) ---- */
+    if (!reduced){
+      gsap.utils.toArray('[data-parallax] img').forEach(function(img){
+        gsap.to(img, {
+          yPercent: 12, ease:'none',
+          scrollTrigger:{ trigger: img.closest('[data-parallax]'), start:'top bottom', end:'bottom top', scrub: 1 }
+        });
+      });
+    }
+  } else {
+    /* GSAP failed to load — show everything */
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.style.opacity=1; el.style.transform='none'; });
+  }
+
+  /* ---- Lang switcher (visual) ---- */
+  document.querySelectorAll('.lang').forEach(function(group){
+    group.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){
+        group.querySelectorAll('button').forEach(function(x){ x.classList.remove('active'); });
+        b.classList.add('active');
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
